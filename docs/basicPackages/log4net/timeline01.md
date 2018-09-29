@@ -2,7 +2,7 @@
 
 ## 简介
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;log4net库是Apache log4j框架在Microsoft .NET平台的实现，是一个帮助程序员将日志信息输出到各种目标（控制台、文件、数据库等）的工具。
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;log4net库是Apache log4j框架在.NET平台的实现，能够将日志信息输出到各种目标（控制台、文件、数据库等）。
 
 特征
 
@@ -13,7 +13,7 @@
 - 支持动态配置
 - 日志上下文
 - 久经验证
-- 模块可扩展性设计
+- 模块化可扩展性设计
 - 灵活高效
 
 ## 简单使用
@@ -25,7 +25,7 @@
 
 ### 配置
 
-log4net支持两种方式配置。
+log4net支持两种方式配置：
 
 #### 内嵌方式配置
 
@@ -99,6 +99,8 @@ log4net支持两种方式配置。
 
 ![image lost](/docs/basicPackages/log4net/content/tl01_assemblyinfo.PNG)
 
+>如果需要支持动态配置，请将Watch设置为true.
+
 3)如下输出日志到控制台
 
 ```csharp
@@ -116,6 +118,10 @@ class Program
     }
 }
 ```
+
+## 体系结构
+
+
 
 ## 参阅
 
