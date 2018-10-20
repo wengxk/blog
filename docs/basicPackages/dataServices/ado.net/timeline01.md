@@ -21,7 +21,7 @@
 此外，还有以下对象：
 
 - Transaction：提供事务支持
-- CommandBuilder：生存Command
+- CommandBuilder：生成Command
 - ConnectionStringBuilder：用于操作ConnectionString
 - Parameter：命令参数
 - Exception：异常
