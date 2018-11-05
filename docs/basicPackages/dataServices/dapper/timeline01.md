@@ -37,7 +37,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在Dapper中有两个重要的委托对象：
 
 - `Action<IDbCommand, object>` ，用来执行Command
-- `Func<IDataReader, object>` ，用来反序列化执行结果的对象映射
+- `Func<IDataReader, object>` ，用来对执行结果的对象映射
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;这两个委托对象都是通过命名空间System.Reflection.Emit下的类发射生成IL形成的动态方法，这就是Dapper高性能的核心所在，每一个相同的sql操作都会直接调用第一次形成的动态方法来操作。
 
