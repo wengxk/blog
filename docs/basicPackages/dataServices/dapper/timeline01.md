@@ -32,6 +32,14 @@
 
 ## 基本原理
 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;每一个命令在执行的时候，都会先生成一个 `CommandDefinition` 对象，然后Dapper会根据这个 `CommandDefinition` 对象的hash值创建一个唯一的Identity对象。前面我们说过不要拼凑sql，就是因为这里hash的过程包括了sql的CommandText，所以拼凑出来的不同sql都会产生出一个新的Identity。Dapper将这个Identity作为字典的键保存在私有变量中，每一个Identity都对应一个CacheInfo对象，这个CacheInfo对象主要包括两个对象，一个是 `Action<IDbCommand, object>` ，这个主要就是实际执行Command的委托，另一个对象是 `DeserializerState` ，这个主要是用来映射命令执行所返回的结果的。
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在Dapper中有两个重要的委托对象：
+
+- `Action<IDbCommand, object>` ，用来执行Command
+- `Func<IDataReader, object>` ，用来反序列化执行结果的对象映射
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;这两个委托对象都是通过命名空间System.Reflection.Emit下的类发射生成IL形成的动态方法，这就是Dapper高性能的核心所在，每一个相同的sql操作都会直接调用第一次形成的动态方法来操作。
 
 ## 参阅
 
