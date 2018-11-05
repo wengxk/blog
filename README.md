@@ -6,7 +6,7 @@
 
 ### Markdown
 
-- [markdown basis](/docs/markdown/markdown_basis.md)
+- [Markdown](/docs/markdown/markdown_basis.md)
 
 ### dotNet
 

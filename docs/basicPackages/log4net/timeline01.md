@@ -18,7 +18,8 @@
 
 ## 简单使用
 
-> 环境：vs2013 + .net4.5
+> 环境：vs2013 + .net4.5  
+> 代码：~\src\vs2013\tour\App1\App1.csproj
 
 ### 获取
 
@@ -258,3 +259,5 @@ class Program
 
 - [https://stackify.com/log4net-guide-dotnet-logging/](https://stackify.com/log4net-guide-dotnet-logging/)
 - [https://logging.apache.org/log4net/release/features.html](https://logging.apache.org/log4net/release/features.html)
+
+>下一篇：[.net core环境下的简单配置与使用](/docs/basicPackages/log4net/timeline02.md)
