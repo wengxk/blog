@@ -1,0 +1,63 @@
+# CentOS
+
+---
+
+常用命令：
+
+查询文件：`find -type f -name "*mysql*"`
+
+查询文件夹：`find -type d -name "*mysql*"`
+
+软件包管理器yum:
+
+---
+
+安装man文档：`yum install man`
+
+man文档基本操作：
+
+翻屏：向后-空格键，向前-b键  
+一行：向后-enter键，向前-k键  
+退出：q键  
+搜索：/KEYWORD 从前向后搜索，?KEYWORD 从后向前搜索，n-下一个，N-上一个
+
+---
+
+docker安装：
+
+检查项:
+
+1. 内核版本：`# uname -a`
+2. 存储驱动Device Mapper：`# ls -l /sys/class/misc/device-mapper`
+
+docker获取centos镜像：`docker pull centos`
+
+docker创建容器：`docker run -it --name "centos_mysql_dbserver" centos`
+
+docker启动容器：`docker start centos_mysql_dbserver`
+
+保持后台运行退出容器：ctrl+p+q
+
+查看正在运行的容器：`docker ps`
+
+---
+
+mysql安装：
+
+docker镜像：`docker pull mysql`
+
+启动mysql容器：`docker run --name mysql_dbserver -p 33060:3306 -e MYSQL_ROOT_PASSWORD=root -d mysql`
+
+登录mysql容器：`docker exec -it mysql_dbserver bash`
+
+登陆mysql：`mysql -u root -p`
+
+查询用户信息：`select host,user,plugin,authentication_string from mysql.user;`
+
+![userinfo](/docs/Linux/CentOS/content/tl01_userinfo.png)
+
+安装vim编辑器：`apt-get update && apt-get -yq install vim`
+
+安装sudo: `apt-get install sudo`
+
+编辑/etc/mysql/mysql.cnf文件，添加参数：skip-name-resolve
