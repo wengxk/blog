@@ -49,6 +49,7 @@
     ><br/>
     > 回到第一级引用
     </p>
+
 5. 列表
     <p>
     - red<br/>
@@ -59,6 +60,7 @@
     2. green<br/>
     3. blue<br/>
     </p>
+
 6. 代码
     <p>
     ```csharp<br/>
@@ -68,14 +70,20 @@
     }
     ```
     </p>
+
 7. 链接
     <p>
     [welcome to google](http://google.com)
     </p>
+
 8. 图片
     <p>
     ![alter title](/src/image/image1.png)
     </p>
+
+9. 表格
+
+ ![md_syntax_table](./md_syntax_table.png)
 
 ## Markdown with VS Code
 
