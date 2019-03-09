@@ -32,5 +32,19 @@
 
 ### 收藏
 
+- .NET
+  - [Guidelines and rules for GetHashCode](https://blogs.msdn.microsoft.com/ericlippert/2011/02/28/guidelines-and-rules-for-gethashcode/)
+  - [Threading in C#](https://blog.gkarch.com/threading/part1.html)
+
 - angular
   - [Run Angular in a Docker Container using Multi-Stage builds](https://malcoded.com/posts/angular-docker)
+
+- docker
+  - [What's Wrong With The Docker :latest Tag?](https://vsupalov.com/docker-latest-tag/)
+  - [What are Docker `<none>:<none>` images?](https://www.projectatomic.io/blog/2015/07/what-are-docker-none-none-images/)
+  
+- JavaScript
+  - [A crash course in just-in-time (JIT) compilers](https://hacks.mozilla.org/2017/02/a-crash-course-in-just-in-time-jit-compilers/)
+
+- Database
+  - [How does a relational database work](http://blog.jobbole.com/100349/)
